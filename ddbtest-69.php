@@ -4,7 +4,7 @@ class UserProfile extends PHPUnit_Extensions_SeleniumTestCase
   protected function setUp()
   {
     $this->setBrowser("*firefox");
-    $this->setBrowserUrl("http://ding2tal.easyting.dk/");
+    $this->setBrowserUrl("http://ding2talz.easyting.dk/");
   }
 
   public function testPreferedBranch()
@@ -27,7 +27,7 @@ class UserProfile extends PHPUnit_Extensions_SeleniumTestCase
     $this->select("id=edit-profile-provider-alma-field-alma-preferred-branch-und", "label=Sindal");
     $this->click("id=edit-submit--2");
     $this->waitForPageToLoad("30000");
-    $this->assertTrue((bool)preg_match('/^[\s\S]*\/users\/fagreferentcs$/',$this->getLocation()));
+    $this->assertTrue((bool)preg_match('/^[\s\S]*\/users\/[a-z\-0-9]+$/',$this->getLocation()));
     $this->assertEquals("Status message The changes have been saved.", $this->getText("css=div.messages.status"));
     $this->assertEquals("Sindal", $this->getText("//div[@id='page']/div/div/div[2]/div/div/div/div/div[2]/div/div/div/div[7]/div[2]/div"));
   }
