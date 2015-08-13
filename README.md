@@ -84,7 +84,7 @@ Any settings different from these, can lead to some assertions will fail.
 Some of the assertions might fail as well due to changed data response (OpenSearch).
 
 ### Webservices
-The tests cover the ding2tal ddb-rc8 clean installation with the following settings:
+At this point, the tests cover a clean installation of DDB CMS (version 7.x-2.0.0) with the following settings:
 - TING OpenSearch agencyId:   **100200**
 - TING OpenSearch Profile:    **test**
 - TING OpenSearch URL:        **http://opensearch.addi.dk/4.0/**
